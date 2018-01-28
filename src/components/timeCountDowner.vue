@@ -68,11 +68,13 @@ export default {
         },
         setTimer() {
             this.computedTime = this.second;
-            this.timer = setInterval(() => {
+            this.timer = () => {
                 this.computedTime--;
-                if (this.computedTime === 0) 
-                    clearInterval(this.timer);
-            }, 1000)
+                setTimeout(this.timer, 1000);
+                if (this.computedTime === 0)
+                    clearTimeout(this.timer);
+            }
+            this.timer();
         }
     },
     destroyed () {
