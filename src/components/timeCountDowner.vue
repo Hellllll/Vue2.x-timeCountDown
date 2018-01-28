@@ -4,7 +4,7 @@
           :class="{right_phone_number: rightPhoneNumber,
                    wrong_phone_format: wrongPhoneFormat}"
           v-show='!computedTime'>获取验证码</button>
-       <button class="compute_time" v-show="computedTime">{{textValue + computedTime}} s</button> 
+       <button class="compute_time" v-show="computedTime">{{computedMessage}}</button> 
     </div>  
 </template>
 
@@ -21,7 +21,7 @@ export default {
     props: {
         textValue: {
             type: String,
-            default: '请耐心等待'
+            default: ''
         },
         second: {
             type: Number,
@@ -32,14 +32,17 @@ export default {
         }
     },
     computed: {
-        rightPhoneNumber: function (){
+        rightPhoneNumber: function () {
             let regx = /^1\d{10}$/gi.test(this.phoneNumber);
             if (this.phoneNumber && !regx) {
                 this.wrongPhoneFormat = true;
             } else {
-                this.wrongPhoneFormat = false;
-                return regx;
+                this.wrongPhoneFormat = false;               
             }     
+            return regx;
+        },
+        computedMessage: function () {
+            return this.textValue.replace(/\$\{second\}/g, this.computedTime);
         }
     },
     methods: {

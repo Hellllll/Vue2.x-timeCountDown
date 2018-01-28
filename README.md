@@ -11,7 +11,7 @@ vue-cli@2.9.2
 - [x] 实现倒计时功能
 - [ ] 适应多场景且设计良好的可复用组件
 - [x] 以秒为单位，可配置
-- [ ] 支持自定义文案
+- [X] 支持自定义文案
 - [X] 按钮多种状态（手机号格式不对，不允许点击等）
 - [X] 点击后，允许通过某种机制reset——需要某后端接口
 - [ ] 按钮可能会被unmount——组件销毁？
@@ -24,7 +24,7 @@ vue-cli@2.9.2
 ```
     <!-- 定时器组件使用方式 -->
     <time-count-downer ref="timeCountDowner" :phone-number="phoneNumber"
-       :second="30">
+       :second="30"  text-value="${second}s后可再次发送">
     </time-count-downer>
 ```
 其中`phone-number`、`second`属性通过父组件下发到子组件中。

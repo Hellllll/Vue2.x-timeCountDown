@@ -1,13 +1,11 @@
 <template>
   <div id="app">
-    <form>
-      <input class="input_phoneNum" type="text" placeholder="手机号" required 
-              v-model="phoneNumber" maxlength="11">
-      <!-- 定时器组件使用方式 -->
-      <time-count-downer ref="timeCountDowner" :phone-number="phoneNumber"
-       :second="30">
-      </time-count-downer>
-    </form>    
+    <input class="input_phoneNum" type="text" placeholder="手机号" required 
+            v-model="phoneNumber" maxlength="11">
+    <!-- 定时器组件使用方式 -->
+    <time-count-downer ref="timeCountDowner" :phone-number="phoneNumber"
+      :second="30" text-value="${second}s后可再次发送">
+    </time-count-downer>   
   </div>
 </template>
 
