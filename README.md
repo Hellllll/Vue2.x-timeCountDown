@@ -30,6 +30,7 @@ vue-cli@2.9.2
 其中`phone-number`、`second`、`text-value`属性通过父组件下发到子组件中。
 
 demo运行效果：
+    npm install
     
     npm run dev
 进行单元测试查看：
