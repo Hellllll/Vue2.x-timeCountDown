@@ -55,13 +55,13 @@ export default {
                     //发送短信验证码
                     let res = await mobileCode(this.phoneNumber);
                     if (res.message) {
-                    //do sth.
-                    return 
+                        //获取到验证码之后进行一些操作
+                        return 
                     }
                     return
                 } else if (!exsis.is_exists) {
-                    //do sth 
-                    this.$refs.timeCountDowner.data.computedTime = 0;
+                    //如果用户不存在，就将按钮初始化原始状态
+                    this.computedTime = 0;
                     return
                 }
             }

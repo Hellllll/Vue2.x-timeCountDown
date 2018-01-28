@@ -27,9 +27,9 @@ vue-cli@2.9.2
        :second="30"  text-value="${second}s后可再次发送">
     </time-count-downer>
 ```
-其中`phone-number`、`second`属性通过父组件下发到子组件中。
+其中`phone-number`、`second`、`text-value`属性通过父组件下发到子组件中。
 
-项目运行：
+demo运行效果：
     
     npm run dev
 进行单元测试查看：
