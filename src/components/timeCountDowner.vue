@@ -94,6 +94,7 @@ export default {
     border-radius: 0.15rem;
     outline: none;
     color: #fff;
+    cursor: pointer;
 }
 button {
     background-color: #919191;
