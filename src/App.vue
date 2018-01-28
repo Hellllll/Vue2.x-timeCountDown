@@ -4,7 +4,7 @@
             v-model="phoneNumber" maxlength="11">
     <!-- 定时器组件使用方式 -->
     <time-count-downer ref="timeCountDowner" :phone-number="phoneNumber"
-      :second="30" text-value="${second}s后可再次发送">
+      :second="60" text-value="${second}s后可再次发送">
     </time-count-downer>   
   </div>
 </template>

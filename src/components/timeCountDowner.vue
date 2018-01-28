@@ -69,10 +69,10 @@ export default {
         setTimer() {
             this.computedTime = this.second;
             this.timer = () => {
-                this.computedTime--;
-                setTimeout(this.timer, 1000);
-                if (this.computedTime === 0)
-                    clearTimeout(this.timer);
+                if (this.computedTime > 0) {                    
+                    this.computedTime--;
+                    setTimeout(this.timer, 1000);
+                }
             }
             this.timer();
         }
